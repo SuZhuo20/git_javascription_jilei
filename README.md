@@ -1,0 +1,2 @@
+# git_javascription_jilei
+javaScript常用功能积累
