@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+			
+			div {
+				width: 100px;
+				height: 100px;
+			}
+			#parent{
+				background-color: skyblue;
+				position: relative;
+			}
+			#first {
+				background-color: red;
+				position: relative;
+				position: absolute;
+				top: 20px;
+				left: 50px;
+			}
+			
+			#second {
+				background-color: greenyellow;
+				/*最接近的一个具有定位属性的父包含块*/
+				position: absolute;
+				top: 0;
+				left: 50px;
+			}
+			
+			#threed {
+				background-color: salmon;
+				/*最接近的一个具有定位属性的父包含块*/
+				position: absolute;
+				top: 0;
+				left: 100px;
+			}
+			/*absolute和relative结合使用,两者都是以含有position：relative的元素为参照物*/
+		</style>
+	</head>
+
+	<body>
+		<div id="parent">
+			<div id="first">relative
+				<div id="second">相对与relative使用绝对位置</div>
+				<div id="threed">判断此时的参照物是谁</div>
+			</div>
+		</div>
+	</body>
+
+</html>
